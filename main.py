@@ -7,7 +7,7 @@ options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
 driver = webdriver.Chrome(options=options)
 
 # Load the Excel file
-workbook = load_workbook("D:\Work\Experiments\pan.xlsx")
+workbook = load_workbook("D:\PANEXCEL\PAN.xlsx")
 sheet = workbook.active
 
 # Go to the website
@@ -40,4 +40,4 @@ for i, row in enumerate(sheet.iter_rows(values_only=True)):
     sheet.cell(row=i+1, column=2).value = status
     sheet.cell(row=i+1, column=3).value = name
     # Save the excel file
-    workbook.save("D:\Work\Experiments\pan.xlsx")
+    workbook.save("D:\PANEXCEL\PAN.xlsx")
